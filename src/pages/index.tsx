@@ -1,13 +1,14 @@
-import { Layout } from "@atrgpt/views/layouts/Layout";
-import { Home } from "@atrgpt/views/pages/home/Home";
-import localFont from "next/font/local";
 
-const geistSans = localFont({
+import { Home, Layout } from "@atrgpt/features";
+import localFont from "next/font/local";
+import Head from "next/head";
+
+export const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
+export const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
@@ -15,8 +16,13 @@ const geistMono = localFont({
 
 export default function HomePage() {
   return (
-    <Layout mode="home">
-      <Home />
-    </Layout>
+    <>
+      <Head>
+        <title>ArtGPT | Home</title>
+      </Head>
+      <Layout mode="home">
+        <Home />
+      </Layout>
+    </>
   );
 }

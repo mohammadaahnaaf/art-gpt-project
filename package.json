@@ -1,6 +1,7 @@
 {
   "name": "art-gpt-project",
   "version": "0.1.0",
+  "author": "ahnaf",
   "private": true,
   "scripts": {
     "dev": "next dev",

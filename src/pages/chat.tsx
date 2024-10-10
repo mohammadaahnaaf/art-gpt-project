@@ -1,4 +1,4 @@
-import { Chat, Layout } from '@atrgpt/views'
+import { Chat, Layout } from '@atrgpt/features'
 import Head from 'next/head'
 import React from 'react'
 
