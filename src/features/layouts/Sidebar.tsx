@@ -1,15 +1,24 @@
 import React from 'react'
+import { cn, useDebounce, useMenu } from '@atrgpt/components'
 
-type Props = {
-    open: boolean
-    toggleSidebar: () => void
-}
-export const Sidebar = (props: Props) => {
-    const { open, toggleSidebar } = props
+export const Sidebar = () => {
+    const { isSidebarOpen, toggleSidebar } = useMenu();
+
+    const show = useDebounce(isSidebarOpen, 600)
+
     return (
-        <s>
-            <button type='button' onChange={toggleSidebar}>Open</button>
-            {open}
-        </s>
+        <div
+            className={cn('bg-black duration-500 transition-all text-[green] h-full',
+                isSidebarOpen && 'w-[300px] translate-x-0 visible',
+                !isSidebarOpen && 'w-0 invisible'
+            )}>
+            <>
+                {isSidebarOpen && show && (
+                    <button type='button' onClick={toggleSidebar}>
+                        {isSidebarOpen ? "Close" : "Open"}
+                    </button>
+                )}
+            </>
+        </div>
     )
 }

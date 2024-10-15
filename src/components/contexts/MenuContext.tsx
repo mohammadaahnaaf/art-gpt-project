@@ -8,9 +8,9 @@ type MenuContextType = {
 const MenuContext = createContext<MenuContextType | undefined>(undefined);
 
 export const MenuProvider = ({ children }: { children: ReactNode }) => {
-    const [isSidebarOpen, setSidebarOpen] = useState(false);
+    const [isSidebarOpen, setSidebarOpen] = useState(true);
 
-    const toggleSidebar = () => setSidebarOpen(prevState => !prevState);
+    const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
     return (
         <MenuContext.Provider value={{ isSidebarOpen, toggleSidebar }}>
