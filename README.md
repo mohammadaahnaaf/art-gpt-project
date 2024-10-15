@@ -2,7 +2,7 @@
   <img src="/public/logo.png" alt="Art-GPT Logo" width="200">
 </p>
 
-# Art-GPT
+# Art-GPT-Project
 
 Art-GPT is an interactive application designed to generate and enhance art using AI capabilities. With Art-GPT, users can create, transform, and explore artistic possibilities through a range of tools powered by advanced generative models.
 
@@ -17,6 +17,6 @@ Art-GPT is an interactive application designed to generate and enhance art using
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Art-GPT.git
-   cd Art-GPT
+   git clone https://github.com/mohammadaahnaaf/art-gpt-project.git
+   cd art-gpt-project
    ```
