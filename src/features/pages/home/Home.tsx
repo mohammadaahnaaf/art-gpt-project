@@ -3,6 +3,6 @@ import React from 'react'
 
 export const Home = () => {
     return (
-        <div className='w-full'>Homes</div>
+        <div className='w-full h-full'>Homes</div>
     )
 }

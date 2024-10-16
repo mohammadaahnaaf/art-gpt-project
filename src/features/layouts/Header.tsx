@@ -1,14 +1,19 @@
-import { useMenu } from '@atrgpt/components';
+import { Logo, useDebounce, useMenu } from '@atrgpt/components';
 import React from 'react'
 
 
 export const Header = () => {
+
     const { isSidebarOpen, toggleSidebar } = useMenu();
+    const show = useDebounce(isSidebarOpen, 600)
+
     return (
-        <header className='bg-[pink] h-20 w-full flex items-center'>
-            <button type='button' onClick={toggleSidebar}>
-                {isSidebarOpen ? "Close" : "Open"}
-            </button>
+        <header className='bg-[pink] h-20 w-full flex items-center p-4'>
+            {!show && !isSidebarOpen && (
+                <button type='button' onClick={toggleSidebar}>
+                    <Logo className='h-14 w-full' fill='white' />
+                </button>
+            )}
         </header>
     )
 }
