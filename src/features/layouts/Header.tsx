@@ -8,10 +8,10 @@ export const Header = () => {
     const show = useDebounce(isSidebarOpen, 600)
 
     return (
-        <header className='bg-[pink] h-20 w-full flex items-center p-4'>
+        <header className='h-20 w-full flex items-center p-4'>
             {!show && !isSidebarOpen && (
                 <button type='button' onClick={toggleSidebar}>
-                    <Logo className='h-14 w-full' fill='white' />
+                    <Logo className='h-14 w-full' fill='green' />
                 </button>
             )}
         </header>

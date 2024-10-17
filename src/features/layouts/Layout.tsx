@@ -14,7 +14,7 @@ export const Layout = (props: Props) => {
 
 
     return mode === 'home' ? (
-        <main className='bg-white text-black min-h-screen flex w-full'>
+        <main className='bg-gray-950 text-white min-h-screen flex w-full'>
             <div className='grid h-screen'>
                 <Sidebar />
             </div>
